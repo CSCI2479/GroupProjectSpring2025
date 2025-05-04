@@ -15,7 +15,8 @@ return new class extends Migration
         $table->id();                  // Primary key
         $table->string('title');       // Title of the book
         $table->foreignId('author_id')->constrained();   // Foreign key for Author
-        $table->foreignId('category_id')->constrained(); // Foreign key for Category
+        $table->integer('category_id')->unsigned();
+        //$table->foreignId('category_id')->constrained(); // Foreign key for Category
         $table->timestamps();          // Created at and Updated at timestamps
     });
 }
