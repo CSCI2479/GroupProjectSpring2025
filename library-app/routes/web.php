@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+// Route::get('/search', 'PostsController@search')->name('search');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -10,6 +12,10 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/search-form', function () {
+    return view('search-form');
+})->middleware(['auth', 'verified'])->name('search-form');;
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -1,3 +1,0 @@
-<div>
-    <!-- Search form -->
-</div>
