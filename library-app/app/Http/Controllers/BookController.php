@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Book;
+use Illuminate\View\View;
 
 class BookController extends Controller
 {
@@ -30,4 +31,5 @@ class BookController extends Controller
 
         return redirect()->route('books.index')->with('success', 'Book created successfully!');
     }
+
 }
